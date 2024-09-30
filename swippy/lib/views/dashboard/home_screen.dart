@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swippy/views/viewsUtil/gradient.dart';
 import 'package:swippy/resources/util/asset_util.dart';
+import 'package:swippy/views/viewsUtil/view_util.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -86,8 +87,28 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               //StoryImpl
-              const Row(
-                children: [],
+              Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Row(
+                  children: [
+                    //Filter
+                    SizedBox(
+                      width: 38,
+                      height: 38,
+                      child: DecoratedBox(
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.rectangle,
+                        ),
+                        child: Image.asset(AssetUtil.filter),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    //pet 1
+                    ViewUtil.statusContainer(AssetUtil.pet1),
+                  ],
+                ),
               )
             ],
           ),
