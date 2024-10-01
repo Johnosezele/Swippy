@@ -107,6 +107,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     //pet 1
                     ViewUtil.statusContainer(AssetUtil.pet1),
+                    //pet 2
+                    ViewUtil.statusContainer(AssetUtil.pet2),
                   ],
                 ),
               )
